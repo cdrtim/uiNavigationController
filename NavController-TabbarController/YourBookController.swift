@@ -14,9 +14,24 @@ class YourBookController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
+        let cameraButtonItem =  UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(takeApicture(sender:)))
+    //   navigationItem.leftBarButtonItem = cameraButtonItem
+        let rightButton  =  UIBarButtonItem(image: UIImage(named: "EMAIL"), style: .plain, target: self, action: #selector(sendEmail(sender:)))
+       // navigationItem.rightBarButtonItem = rightButton
+        navigationItem.setRightBarButtonItems([cameraButtonItem,rightButton], animated: true
+        )
+        
+        
     }
-
+    
+    func sendEmail(sender: AnyObject) {
+        print("sending email")
+    }
+    
+    func takeApicture(sender: AnyObject) {
+        print("Take a picture")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

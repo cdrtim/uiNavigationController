@@ -11,9 +11,9 @@ import UIKit
 class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.red,
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white,
                                              NSFontAttributeName : UIFont.init(name: "SFUIText-Semibold", size: 24)!]
-        navigationBar.tintColor = UIColor.blue
+        navigationBar.tintColor = UIColor.white
     }
     
 }
